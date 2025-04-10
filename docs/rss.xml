@@ -1,5 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Pt.ll的blog</title><link>https://Ptzyc.github.io/Pt.ll.github.io</link><description>Pt.ll的专属blog</description><copyright>Pt.ll的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.luogu.com.cn/upload/image_hosting/pnqeub2s.png</url><title>avatar</title><link>https://Ptzyc.github.io/Pt.ll.github.io</link></image><lastBuildDate>Thu, 10 Apr 2025 09:09:55 +0000</lastBuildDate><managingEditor>Pt.ll的blog</managingEditor><ttl>60</ttl><webMaster>Pt.ll的blog</webMaster><item><title>题解：AT_abc242_d [ABC242D] ABC Transform</title><link>https://Ptzyc.github.io/Pt.ll.github.io/post/ti-jie-%EF%BC%9AAT_abc242_d%20%5BABC242D%5D%20ABC%20Transform.html</link><description># D - ABC Transform
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Pt.ll的blog</title><link>https://Ptzyc.github.io/Pt.ll.github.io</link><description>Pt.ll的专属blog</description><copyright>Pt.ll的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.luogu.com.cn/upload/image_hosting/pnqeub2s.png</url><title>avatar</title><link>https://Ptzyc.github.io/Pt.ll.github.io</link></image><lastBuildDate>Thu, 10 Apr 2025 09:23:47 +0000</lastBuildDate><managingEditor>Pt.ll的blog</managingEditor><ttl>60</ttl><webMaster>Pt.ll的blog</webMaster><item><title>题解：AT_abc245_e [ABC245E] Wrapping Chocolate</title><link>https://Ptzyc.github.io/Pt.ll.github.io/post/ti-jie-%EF%BC%9AAT_abc245_e%20%5BABC245E%5D%20Wrapping%20Chocolate.html</link><description># E - Wrapping Chocolate
+[题目](https://atcoder.jp/contests/abc245/tasks/abc245_e)
+
+这题一看就是**贪心**，对于某个物品来说，我们要尽量放到小的箱子里。</description><guid isPermaLink="true">https://Ptzyc.github.io/Pt.ll.github.io/post/ti-jie-%EF%BC%9AAT_abc245_e%20%5BABC245E%5D%20Wrapping%20Chocolate.html</guid><pubDate>Thu, 10 Apr 2025 09:18:08 +0000</pubDate></item><item><title>题解：AT_abc242_e [ABC242E] (∀x∀)</title><link>https://Ptzyc.github.io/Pt.ll.github.io/post/ti-jie-%EF%BC%9AAT_abc242_e%20%5BABC242E%5D%20%28%E2%88%80x%E2%88%80%29.html</link><description># E - (∀x∀)
+[题目](https://atcoder.jp/contests/abc242/tasks/abc242_e)
+
+~~这题我居然给自己挖了两个坑，还都跳下去了~~
+
+我们考虑回文字符串是如何构成的，是由前面大约 $n \div 2$ 个字符翻转拼接而成。</description><guid isPermaLink="true">https://Ptzyc.github.io/Pt.ll.github.io/post/ti-jie-%EF%BC%9AAT_abc242_e%20%5BABC242E%5D%20%28%E2%88%80x%E2%88%80%29.html</guid><pubDate>Thu, 10 Apr 2025 09:14:24 +0000</pubDate></item><item><title>题解：CF241E Flights</title><link>https://Ptzyc.github.io/Pt.ll.github.io/post/ti-jie-%EF%BC%9ACF241E%20Flights.html</link><description># 题目
+[题目传送门](https://codeforces.com/problemset/problem/241/E)
+# 大意
+有一个 $n$ 个结点且每条边权值均为 $1$ 的有向图，要你把一些边权改成 $2$ 使得任意一条从 $1$ 到 $n$ 的路径长度都相等。</description><guid isPermaLink="true">https://Ptzyc.github.io/Pt.ll.github.io/post/ti-jie-%EF%BC%9ACF241E%20Flights.html</guid><pubDate>Thu, 10 Apr 2025 09:13:58 +0000</pubDate></item><item><title>题解：AT_abc241_f [ABC241F] Skate</title><link>https://Ptzyc.github.io/Pt.ll.github.io/post/ti-jie-%EF%BC%9AAT_abc241_f%20%5BABC241F%5D%20Skate.html</link><description># Skate
+
+[题目](https://www.luogu.com.cn/problem/AT_abc241_f)
+
+这是一道一眼的 **Bfs** 但单单是搜索就很容易爆 **TLE**。</description><guid isPermaLink="true">https://Ptzyc.github.io/Pt.ll.github.io/post/ti-jie-%EF%BC%9AAT_abc241_f%20%5BABC241F%5D%20Skate.html</guid><pubDate>Thu, 10 Apr 2025 09:12:45 +0000</pubDate></item><item><title>题解：AT_abc242_d [ABC242D] ABC Transform</title><link>https://Ptzyc.github.io/Pt.ll.github.io/post/ti-jie-%EF%BC%9AAT_abc242_d%20%5BABC242D%5D%20ABC%20Transform.html</link><description># D - ABC Transform
 [题目](https://atcoder.jp/contests/abc242/tasks/abc242_d)
 
 我们不难发现，它每次分裂出两个节点，这是啥，二叉树啊，请看图：
