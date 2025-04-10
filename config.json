@@ -2,5 +2,8 @@
     "title":"Pt.ll的blog",
     "subTitle":"Pt.ll的专属blog",
     "avatarUrl":"https://cdn.luogu.com.cn/upload/image_hosting/pnqeub2s.png",
-    "GMEEK_VERSION":"last"
+    "GMEEK_VERSION":"last",
+    "UTC":8,
+    "needComment":1,
+    "bottomText":"转载请注明出处",
 }
