@@ -1,5 +1,18 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Pt.ll的blog</title><link>https://Ptzyc.github.io/Pt.ll.github.io</link><description>Pt.ll的专属blog</description><copyright>Pt.ll的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.luogu.com.cn/upload/image_hosting/pnqeub2s.png</url><title>avatar</title><link>https://Ptzyc.github.io/Pt.ll.github.io</link></image><lastBuildDate>Thu, 10 Apr 2025 08:50:08 +0000</lastBuildDate><managingEditor>Pt.ll的blog</managingEditor><ttl>60</ttl><webMaster>Pt.ll的blog</webMaster><item><title>题解：P7054 [NWRRC2015] Graph</title><link>https://Ptzyc.github.io/Pt.ll.github.io/post/ti-jie-%EF%BC%9AP7054%20%5BNWRRC2015%5D%20Graph.html</link><description>[题目传送门](https://www.luogu.com.cn/problem/P7054)
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Pt.ll的blog</title><link>https://Ptzyc.github.io/Pt.ll.github.io</link><description>Pt.ll的专属blog</description><copyright>Pt.ll的blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.luogu.com.cn/upload/image_hosting/pnqeub2s.png</url><title>avatar</title><link>https://Ptzyc.github.io/Pt.ll.github.io</link></image><lastBuildDate>Thu, 10 Apr 2025 09:09:55 +0000</lastBuildDate><managingEditor>Pt.ll的blog</managingEditor><ttl>60</ttl><webMaster>Pt.ll的blog</webMaster><item><title>题解：AT_abc242_d [ABC242D] ABC Transform</title><link>https://Ptzyc.github.io/Pt.ll.github.io/post/ti-jie-%EF%BC%9AAT_abc242_d%20%5BABC242D%5D%20ABC%20Transform.html</link><description># D - ABC Transform
+[题目](https://atcoder.jp/contests/abc242/tasks/abc242_d)
+
+我们不难发现，它每次分裂出两个节点，这是啥，二叉树啊，请看图：
+![](https://cdn.luogu.com.cn/upload/image_hosting/uq13mj8o.png)
+
+所以我们只需用一个变量统计一下单复数，左根加 $1$ 右根加 $2$，即：
+
+$$sum = sum + \begin{cases}
+1 &amp; k \equiv 1 \pmod 2\\
+2 &amp; k \equiv 0 \pmod 2
+\end{cases}$$
+
+注意，如果 $60 \le t$ 那么数肯定大于 $10^{18}$。</description><guid isPermaLink="true">https://Ptzyc.github.io/Pt.ll.github.io/post/ti-jie-%EF%BC%9AAT_abc242_d%20%5BABC242D%5D%20ABC%20Transform.html</guid><pubDate>Thu, 10 Apr 2025 08:57:21 +0000</pubDate></item><item><title>题解：P7054 [NWRRC2015] Graph</title><link>https://Ptzyc.github.io/Pt.ll.github.io/post/ti-jie-%EF%BC%9AP7054%20%5BNWRRC2015%5D%20Graph.html</link><description>[题目传送门](https://www.luogu.com.cn/problem/P7054)
 # **题目分析**
 题目说的很清楚，如果没有 $k$ 就是纯**拓扑**；
 

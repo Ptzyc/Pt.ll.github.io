@@ -10,29 +10,39 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="[题目传送门](https://www.luogu.com.cn/problem/P7054)
-# **题目分析**
-题目说的很清楚，如果没有 $k$ 就是纯**拓扑**；
+<meta name="description" content="# D - ABC Transform
+[题目](https://atcoder.jp/contests/abc242/tasks/abc242_d)
 
-题目说最小的拓扑序的最大，俗称第一位最小，第二位第二小等；这一看就是**贪心**；
+我们不难发现，它每次分裂出两个节点，这是啥，二叉树啊，请看图：
+![](https://cdn.luogu.com.cn/upload/image_hosting/uq13mj8o.png)
 
-虽说知道了大致方向但如何贪又是一个问题；
-# **思路**
-贪心：对于当前入度为 $0$ 的点，假如有多个，给比较小的点加一个连向它的边，然后选大一点的点。">
-<meta property="og:title" content="题解：P7054 [NWRRC2015] Graph">
-<meta property="og:description" content="[题目传送门](https://www.luogu.com.cn/problem/P7054)
-# **题目分析**
-题目说的很清楚，如果没有 $k$ 就是纯**拓扑**；
+所以我们只需用一个变量统计一下单复数，左根加 $1$ 右根加 $2$，即：
 
-题目说最小的拓扑序的最大，俗称第一位最小，第二位第二小等；这一看就是**贪心**；
+$$sum = sum + \begin{cases}
+1 & k \equiv 1 \pmod 2\\
+2 & k \equiv 0 \pmod 2
+\end{cases}$$
 
-虽说知道了大致方向但如何贪又是一个问题；
-# **思路**
-贪心：对于当前入度为 $0$ 的点，假如有多个，给比较小的点加一个连向它的边，然后选大一点的点。">
+注意，如果 $60 \le t$ 那么数肯定大于 $10^{18}$。">
+<meta property="og:title" content="题解：AT_abc242_d [ABC242D] ABC Transform">
+<meta property="og:description" content="# D - ABC Transform
+[题目](https://atcoder.jp/contests/abc242/tasks/abc242_d)
+
+我们不难发现，它每次分裂出两个节点，这是啥，二叉树啊，请看图：
+![](https://cdn.luogu.com.cn/upload/image_hosting/uq13mj8o.png)
+
+所以我们只需用一个变量统计一下单复数，左根加 $1$ 右根加 $2$，即：
+
+$$sum = sum + \begin{cases}
+1 & k \equiv 1 \pmod 2\\
+2 & k \equiv 0 \pmod 2
+\end{cases}$$
+
+注意，如果 $60 \le t$ 那么数肯定大于 $10^{18}$。">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://Ptzyc.github.io/Pt.ll.github.io/post/ti-jie-%EF%BC%9AP7054%20%5BNWRRC2015%5D%20Graph.html">
+<meta property="og:url" content="https://Ptzyc.github.io/Pt.ll.github.io/post/ti-jie-%EF%BC%9AAT_abc242_d%20%5BABC242D%5D%20ABC%20Transform.html">
 <meta property="og:image" content="https://cdn.luogu.com.cn/upload/image_hosting/pnqeub2s.png">
-<title>题解：P7054 [NWRRC2015] Graph</title>
+<title>题解：AT_abc242_d [ABC242D] ABC Transform</title>
 <link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
 
@@ -75,7 +85,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 
 <body>
     <div id="header">
-<h1 class="postTitle">题解：P7054 [NWRRC2015] Graph</h1>
+<h1 class="postTitle">题解：AT_abc242_d [ABC242D] ABC Transform</h1>
 <div class="title-right">
     <a href="https://Ptzyc.github.io/Pt.ll.github.io" id="buttonHome" class="btn btn-invisible circle" title="首页">
         <svg class="octicon" width="16" height="16">
@@ -83,7 +93,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
         </svg>
     </a>
     
-    <a href="https://github.com/Ptzyc/Pt.ll.github.io/issues/1" target="_blank" class="btn btn-invisible circle" title="Issue">
+    <a href="https://github.com/Ptzyc/Pt.ll.github.io/issues/2" target="_blank" class="btn btn-invisible circle" title="Issue">
         <svg class="octicon" width="16" height="16">
             <path id="pathIssue" fill-rule="evenodd"></path>
         </svg>
@@ -99,88 +109,48 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p><a href="https://www.luogu.com.cn/problem/P7054" rel="nofollow">题目传送门</a></p>
-<h1><strong>题目分析</strong></h1>
-<p>题目说的很清楚，如果没有 $k$ 就是纯<strong>拓扑</strong>；</p>
-<p>题目说最小的拓扑序的最大，俗称第一位最小，第二位第二小等；这一看就是<strong>贪心</strong>；</p>
-<p>虽说知道了大致方向但如何贪又是一个问题；</p>
-<h1><strong>思路</strong></h1>
-<p>贪心：对于当前入度为 $0$ 的点，假如有多个，给比较小的点加一个连向它的边，然后选大一点的点。</p>
-<p>拓扑：在拓扑中不断进行选择，从 $in$ 为 $0$ 的点开始依次抉择，每一步找一个小一点的点来连；</p>
-<p>所以总体思路就是贪心和拓扑；</p>
-<p>那么怎么存呢？</p>
-<p>众所周知，实现拓扑时会使用到<strong>队列</strong>这<del>很容易</del>想到 <code class="notranslate">priority_queue</code> 来排最小字典序的拓扑序，因为为了满足字典序最小，我把拓扑排序的队列换成小根堆，并且记录路径（其实无所谓，用 <code class="notranslate">priority_queue</code> 也行）；</p>
-<p>我们要让连边后的拓扑序字典序最大，那就要让越靠前的数越大，不难想到：我们只需要用一个大根堆来存储当前能与其他点连边的点就行了（大根堆会自动从大到小排序）。</p>
-<h1><strong>Code</strong></h1>
+<div class="markdown-body" id="postBody"><h1>D - ABC Transform</h1>
+<p><a href="https://atcoder.jp/contests/abc242/tasks/abc242_d" rel="nofollow">题目</a></p>
+<p>我们不难发现，它每次分裂出两个节点，这是啥，二叉树啊，请看图：<br>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/900e73d1517afde6856d4da1b2bddb40e36ba45f5eae1891c4f4a8936d9112a0/68747470733a2f2f63646e2e6c756f67752e636f6d2e636e2f75706c6f61642f696d6167655f686f7374696e672f757131336d6a386f2e706e67"><img src="https://camo.githubusercontent.com/900e73d1517afde6856d4da1b2bddb40e36ba45f5eae1891c4f4a8936d9112a0/68747470733a2f2f63646e2e6c756f67752e636f6d2e636e2f75706c6f61642f696d6167655f686f7374696e672f757131336d6a386f2e706e67" alt="" data-canonical-src="https://cdn.luogu.com.cn/upload/image_hosting/uq13mj8o.png" style="max-width: 100%;"></a></p>
+<p>所以我们只需用一个变量统计一下单复数，左根加 $1$ 右根加 $2$，即：</p>
+<p>$$sum = sum + \begin{cases}
+1 &amp; k \equiv 1 \pmod 2\\
+2 &amp; k \equiv 0 \pmod 2
+\end{cases}$$</p>
+<p>注意，如果 $60 \le t$ 那么数肯定大于 $10^{18}$。</p>
+<h1>D - Code</h1>
 <div class="highlight highlight-source-c++"><pre class="notranslate">#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>bits/stdc++.h<span class="pl-pds">&gt;</span></span>
 #<span class="pl-k">define</span> <span class="pl-en">ll</span> <span class="pl-k">long</span> <span class="pl-k">long</span>
+#<span class="pl-k">define</span> <span class="pl-en">mod</span> <span class="pl-c1">998244353</span>
 <span class="pl-k">using</span> <span class="pl-k">namespace</span> <span class="pl-en">std</span><span class="pl-k">;</span>
-<span class="pl-k">const</span> ll N=<span class="pl-c1">1e5</span>+<span class="pl-c1">5</span>;
-ll n,in[N],m,k;
-<span class="pl-k">struct</span> <span class="pl-en">node</span> {
-    ll u,v;
-};
-vector&lt;ll&gt; v[N];
-vector&lt;node&gt; ans;
-priority_queue&lt;ll,vector&lt;ll&gt;,greater&lt;ll&gt;&gt; pq;
-priority_queue&lt;ll,vector&lt;ll&gt;,less&lt;ll&gt;&gt; q;<span class="pl-c"><span class="pl-c">//</span>用priority_queue&lt;ll&gt;也行</span>
-<span class="pl-k">void</span> <span class="pl-en">tosort</span>() {
-    ll root=-<span class="pl-c1">1</span>;
-    <span class="pl-k">while</span>(!q.<span class="pl-c1">empty</span>()||!pq.<span class="pl-c1">empty</span>()) {
-        <span class="pl-k">while</span>(!pq.<span class="pl-c1">empty</span>()&amp;&amp;k&gt;<span class="pl-c1">0</span>) {
-            ll num=pq.<span class="pl-c1">top</span>();
-            pq.<span class="pl-c1">pop</span>();
-            ll sum=q.<span class="pl-c1">empty</span>()?<span class="pl-c1">0</span>:q.<span class="pl-c1">top</span>();
-            <span class="pl-k">if</span>(sum&lt;num&amp;&amp;pq.<span class="pl-c1">empty</span>()) {
-                pq.<span class="pl-c1">push</span>(num);
-                <span class="pl-k">break</span>;
-            }
-            q.<span class="pl-c1">push</span>(num);
-            k--;
+<span class="pl-k">const</span> ll N=<span class="pl-c1">1e6</span>+<span class="pl-c1">5</span>;
+ll q;
+string s;
+<span class="pl-k">char</span> ans;
+<span class="pl-k">int</span> <span class="pl-en">main</span>() {
+    cin&gt;&gt;s&gt;&gt;q;
+    <span class="pl-k">while</span>(q--) {
+        ll k,t;
+        cin&gt;&gt;t&gt;&gt;k;
+        ll sum=<span class="pl-c1">0</span>;
+        <span class="pl-k">while</span>(<span class="pl-c1">1</span>) {
+            <span class="pl-k">if</span>(!t||k==<span class="pl-c1">1</span>) <span class="pl-k">break</span>;
+            <span class="pl-k">if</span>(k%<span class="pl-c1">2</span>==<span class="pl-c1">1</span>) sum++;
+            <span class="pl-k">else</span> sum+=<span class="pl-c1">2</span>;
+            k=(k+<span class="pl-c1">1</span>)/<span class="pl-c1">2</span>;
+            t--;
         }
-        ll num=-<span class="pl-c1">1</span>;
-        <span class="pl-k">if</span>(pq.<span class="pl-c1">empty</span>()) {
-            num=q.<span class="pl-c1">top</span>();
-            q.<span class="pl-c1">pop</span>();
-            <span class="pl-k">if</span>(root!=-<span class="pl-c1">1</span>) {
-                ans.<span class="pl-c1">push_back</span>({root,num});
-            }
+        <span class="pl-k">if</span>(t) {
+            ans=(s[<span class="pl-c1">0</span>]-<span class="pl-s"><span class="pl-pds">'</span>A<span class="pl-pds">'</span></span>+sum+t)%<span class="pl-c1">3</span>+<span class="pl-s"><span class="pl-pds">'</span>A<span class="pl-pds">'</span></span>;
         }
         <span class="pl-k">else</span> {
-            num=pq.<span class="pl-c1">top</span>();
-            pq.<span class="pl-c1">pop</span>();
+            ans=(s[k-<span class="pl-c1">1</span>]-<span class="pl-s"><span class="pl-pds">'</span>A<span class="pl-pds">'</span></span>+sum)%<span class="pl-c1">3</span>+<span class="pl-s"><span class="pl-pds">'</span>A<span class="pl-pds">'</span></span>;
         }
-        cout&lt;&lt;num&lt;&lt;<span class="pl-s"><span class="pl-pds">'</span> <span class="pl-pds">'</span></span>;
-        <span class="pl-k">for</span>(ll i=<span class="pl-c1">0</span>;i&lt;v[num].<span class="pl-c1">size</span>();i++) {
-            in[v[num][i]]--;
-            <span class="pl-k">if</span>(in[v[num][i]]==<span class="pl-c1">0</span>) {
-                pq.<span class="pl-c1">push</span>(v[num][i]);
-            }
-        }
-        root=num;
-    }
-}
-<span class="pl-k">int</span> <span class="pl-en">main</span>() {
-    cin&gt;&gt;n&gt;&gt;m&gt;&gt;k;
-    <span class="pl-k">for</span>(ll i=<span class="pl-c1">1</span>;i&lt;=m;i++) {
-        ll x,y;
-        cin&gt;&gt;x&gt;&gt;y;
-        v[x].<span class="pl-c1">push_back</span>(y);
-        in[y]++;
-    }
-    <span class="pl-k">for</span>(ll i=<span class="pl-c1">1</span>;i&lt;=n;i++) {
-        <span class="pl-k">if</span>(in[i]==<span class="pl-c1">0</span>) {
-            pq.<span class="pl-c1">push</span>(i);
-        }
-    }
-    <span class="pl-c1">tosort</span>();
-    cout&lt;&lt;endl&lt;&lt;ans.<span class="pl-c1">size</span>()&lt;&lt;endl;
-    <span class="pl-k">for</span>(ll i=<span class="pl-c1">0</span>;i&lt;ans.<span class="pl-c1">size</span>();i++) {
-        cout&lt;&lt;ans[i].<span class="pl-smi">u</span>&lt;&lt;<span class="pl-s"><span class="pl-pds">'</span> <span class="pl-pds">'</span></span>&lt;&lt;ans[i].<span class="pl-smi">v</span>&lt;&lt;endl;
+        cout&lt;&lt;ans&lt;&lt;endl;
     }
     <span class="pl-k">return</span> <span class="pl-c1">0</span>;
-}</pre></div>
-<p>感谢 <a href="https://www.luogu.com.cn/user/427045" rel="nofollow">plh</a> 对本题解的帮助。</p></div>
+}</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;">转载请注明出处</div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
