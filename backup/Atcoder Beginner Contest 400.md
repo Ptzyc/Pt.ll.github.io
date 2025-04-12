@@ -1,4 +1,3 @@
-@[Toc](Atcoder Beginner Contest 400)
 # 在 Print 之前
 已经有近一个月没写文章了，这又是一片 $Atcoder$ 的比赛，场A了4道题，~~第五题没改出来~~。
 
