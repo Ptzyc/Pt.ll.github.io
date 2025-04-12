@@ -95,9 +95,11 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p>我们只需考虑巧克力的长或宽与盒子的长或宽的大小，这只需一个 <code class="notranslate">sort</code>。</p>
 <p>考虑长和宽两个因素比较困难，因此我们可以对其按长排序，只考虑长，若不存在某个宽度满足条件，则说明无法放入。</p>
 <p>但在进行贪心时，需要考虑长的大小，并进行排序，还需用<strong>二分</strong>来查找。</p>
-<p>毕竟<br>
-$1 \le N \le M \le 2\times\ 10^5$<br>
-$1 \le A_i,B_i,C_i,D_i \le 10^9$</p>
+<p>毕竟</p>
+<ul>
+<li>$1 \le N \le M \le 2\times\ 10^5$</li>
+<li>$1 \le A_i,B_i,C_i,D_i \le 10^9$</li>
+</ul>
 <p>所以在具体的实现中，可以使用 <code class="notranslate">multiset</code> 来维护箱子的宽度，然后使用 <code class="notranslate">lower_bound</code> 来遍历物品和箱子。</p>
 <p>最后记得把用过的数删掉。</p>
 <h2>E - Code</h2>

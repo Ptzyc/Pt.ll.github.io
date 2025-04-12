@@ -10,8 +10,8 @@
 但在进行贪心时，需要考虑长的大小，并进行排序，还需用**二分**来查找。
 
 毕竟
-$1 \le N \le M \le 2\times\ 10^5$
-$1 \le A_i,B_i,C_i,D_i \le 10^9$
+- $1 \le N \le M \le 2\times\ 10^5$
+- $1 \le A_i,B_i,C_i,D_i \le 10^9$
 
 所以在具体的实现中，可以使用 `multiset` 来维护箱子的宽度，然后使用 `lower_bound` 来遍历物品和箱子。
 
